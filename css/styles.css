@@ -51,6 +51,7 @@ address {
     --logo-secondname-color: #000000;
     --footer-contact-color: rgba(255, 255, 255, 0.6);
     --primary-bgc-color: #ffffff;
+    --hero-bgc-color: #2F303A66;
     --footer-bgc-color: #2F303A;
     --secondary-bgc-color: #F5F4FA;
     --btnprimary-bgc-color: #188CE8;
@@ -164,15 +165,14 @@ address {
 } 
 
 .section-hero {
-    background-color: var(--footer-bgc-color);
+    background-color: var(--hero-bgc-color);
     color: var(--accent-text-color);
     text-align: center;
     padding: 200px 0px;
 }
 
 .overlay {
-    min-width: 1600px;
-    height: 600px;
+    width: 1600px;
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
@@ -263,14 +263,12 @@ address {
     border-radius: 4px;
     width: 270px;
     height: 120px;
+    align-items: center;
+    justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--secondary-bgc-color);
     margin-bottom: 30px;
-}
-
-.feature-icon {
-    margin: auto;    
 }
 
 .feature-item:nth-child(4n) {
@@ -290,6 +288,7 @@ address {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    margin-bottom: 0;
 }
 
 /* Чим ми займаємося */
@@ -364,7 +363,6 @@ padding-top: 0;
     width: 100%;
     height: 100%;
     fill: var(--primary-icons-color);
-    background-color: var(--secondary-bgc-color);
     border-radius: 50%;   
 }
 
@@ -571,9 +569,11 @@ padding-top: 0;
     margin-bottom: 0;
 }
 .project-link {
+    display: block;
     text-decoration: none;
 }
-.project-item:hover {
+.project-link:hover,
+.project-link:focus {
     box-shadow: var(--project-shadow);
 }
 .project-content {
